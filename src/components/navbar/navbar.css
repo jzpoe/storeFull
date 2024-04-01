@@ -1,0 +1,77 @@
+.container-navbar {
+    background-color: rgb(0, 0, 0, 0.1); /* Color de fondo del Navbar */
+    position: fixed; /* Fijar el Navbar en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1000; /* Asegura que el Navbar esté por encima de otros elementos */
+    display: flex;
+    align-items: center;
+  }
+  
+  .ul-navbar {
+    display: flex; /* Mostrar los elementos en línea */
+    list-style-type: none; /* Quitar los puntos de la lista */
+    padding: 0; /* Eliminar el espacio interior de la lista */
+    justify-content: space-between; /* Distribuir elementos en el contenedor */
+
+  }
+  
+  .navbar-li,
+  .centered-element,
+  .right-aligned
+   {
+    margin-right: 20px; /* Espacio entre elementos del Navbar */
+  }
+  
+  .navbar-li a {
+    font-family: sans-serif;
+    font-size: 16.2 px;
+    font-weight: bold;
+    color: #fff; /* Color del texto de los enlaces */
+    text-decoration: none solid rgb(49,30,214); /* Quitar subrayado de los enlaces */
+    padding: 10px; /* Espacio interno de los enlaces */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Efecto de transición al pasar el mouse */
+  }
+  
+  .navbar-li a:hover {
+    background-color: rgb(49,30,214); /* Color de fondo al pasar el mouse */
+  }
+
+  
+  .centered-element a:hover {
+    background-color: rgb(49,30,214); /* Color de fondo al pasar el mouse */
+  }
+  .right-aligned a:hover {
+    background-color: rgb(49,30,214); /* Color de fondo al pasar el mouse */
+  }
+
+  .centered-element{
+   color: #fff;
+    margin-left: 200px;
+  }
+
+  .right-aligned {
+    margin-left: 540px; /* Ajusta el margen derecho según sea necesario */
+  }
+
+  
+
+   .centered-element
+   right-aligned, a {
+    font-weight: bold;
+    color: #fff; /* Color del texto de los enlaces */
+    text-decoration: none; /* Quitar subrayado de los enlaces */
+    
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Efecto de transición al pasar el mouse */
+  }
+
+  .right-aligned
+  right-aligned, a:hover {
+    background-color: #555; /* Color de fondo al pasar el mouse */
+    height: 100px;
+   
+  }
