@@ -1,10 +1,10 @@
 import "./render.css";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import Header from "../header/Header";
 import Swal from "sweetalert2";
 
-export const RenderImage = ({ actualizarImagenes }) => {
+export const RenderImage = () => {
   const [imagenGet, setImagenGet] = useState([]);
 
   const renderImagen1 = async () => {
@@ -61,19 +61,23 @@ export const RenderImage = ({ actualizarImagenes }) => {
         <div className="image-grid">
           {imagenGet.map((imagen) => (
             
-              <div key={imagen._id} className="image-card">
+              <div key={imagen.url} className="image-card">
                 {/* Utiliza la URL relativa del servidor para la imagen */}
                 <div className="image">
                 <img
-                  src={`http://localhost:3002/${imagen.imageUrl}`}
-                  alt={imagen.description}
+                  //src={`http://localhost:3002/${imagen.imageUrl}`}
+                  src={imagen.path}
+
+                  alt={imagen.filename}
                   className="image-item"
                 />
                 </div>
                 
+              <div className="container-description">
+              <h2>{imagen.description}</h2>
 
-                <h2>{imagen.description}</h2>
-                <button onClick={handleEliminarImagen} >eliminar</button>
+              </div>
+                <button onClick={handleEliminarImagen}  className="btn-delete">eliminar</button>
               </div>
             
           ))}

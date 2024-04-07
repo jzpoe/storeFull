@@ -1,61 +1,92 @@
 .container-image {
-  
-  
-    max-width: 1340px;
-    margin: 0; /* Eliminar el margen para que las imágenes estén más pegadas al borde */
-margin-left: 30px;
-  }
-  
-  .image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Cuadrícula de imágenes responsiva */
-    gap: 7px;
-    margin-top: 8gi0px;
-  }
-  
-  .image-item {
-    
-    max-width: 100%; /* La imagen no superará el ancho del contenedor */
-    height: 370px; /* La altura se ajustará automáticamente según el ancho */
-    width: 300px;
-  }
+  background: #fff;
+  width: 100%;
+  height: 120vh;
+  margin: 0; /* Eliminar el margen para que las imágenes estén más pegadas al borde */
+}
 
-  .container-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh; /* Altura del header del 80% del viewport height */
-    background-color: #333; /* Color de fondo del header */
-  }
-  
-  .container-header img {
-    width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
-    height: 100%; /* La imagen ocupará el 100% de la altura del contenedor */
-    object-fit:fill; /* Hace que la imagen cubra todo el espacio del contenedor, manteniendo su relación de aspecto */
-  }
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(380px, 1fr)
+  ); /* Cuadrícula de imágenes responsiva */
+  gap: 7px;
+  margin-left: 100px;
+  margin-top: 70px;
+}
 
-  .image-card {
-    height: 500px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves */
-   
-    overflow: hidden; /* Para que los bordes redondeados se apliquen correctamente */
-  }
+.image-item {
+  margin-top: 50px;
+  max-width: 100%; /* La imagen no superará el ancho del contenedor */
+  height: 273px;
+  width: 265px;
+}
 
- 
+.container-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Altura del header del 80% del viewport height */
+  background-color: #333; /* Color de fondo del header */
+}
 
-  .description{
-    border-radius: 10px;
-    color: red;
-    background-color: rgb(0, 0, 0, 0.1);
-    width: auto;
-    height: 100px;
+.container-header img {
+  width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
+  height: 100%; /* La imagen ocupará el 100% de la altura del contenedor */
+  object-fit: fill; /* Hace que la imagen cubra todo el espacio del contenedor, manteniendo su relación de aspecto */
+}
 
-  }
+.image-card {
+  height: 480px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+  width: 300px;
+  overflow: hidden; /* Para que los bordes redondeados se apliquen correctamente */
+}
 
-  .image{
-   display: flex;
-   align-items: center;
-   justify-content:center;
-   padding: 10px;
-  }
+.description {
+  border-radius: 10px;
+  color: red;
+  background-color: rgb(0, 0, 0, 0.1);
+  width: auto;
+  height: 100px;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.container-description {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(0, 0, 0, 0.1);
+  width: 100%;
+  border-radius: 10px;
+}
+
+h2 {
+  color: black;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px;
+}
+
+.btn-delete {
+  margin-left: 35%;
+  margin-top: 50px;
+  background-color: red; /* Color de fondo rojo */
+  color: white; /* Color del texto blanco */
+  border: none; /* Sin borde */
+  padding: 8px 16px; /* Espaciado interno */
+  cursor: pointer; /* Cambiar a cursor de puntero */
+  border-radius: 4px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Estilo cuando se pasa el mouse sobre el botón */
+.btn-delete:hover {
+  background-color: darkred; /* Cambia el color de fondo al pasar el mouse */
+}

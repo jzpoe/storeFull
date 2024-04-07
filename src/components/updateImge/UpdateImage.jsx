@@ -2,13 +2,13 @@
 
 import './update.css';
 import axios from 'axios';
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import Swal from 'sweetalert2';
-import {RenderImage} from '../renderImage/RenderImage';
 
 export const UpdateImage = () => {
   const [image, setImage] = useState(null);
   const [description, setDescription] = useState('');
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
   
@@ -20,33 +20,33 @@ export const UpdateImage = () => {
     setDescription(e.target.value);
   };
   
-  const actualizarImagenes = async () => {
-    await renderImagen1();
-  }; 
+  
   
 
   const handleImage = async () => {
     const formData = new FormData();
     formData.append('image', image);
+    formData.append('upload_preset', 'mjxpq9vf'); // Aquí debes usar tu propio upload preset
     formData.append('description', description);
 
     try {
       const response = await axios.post('http://localhost:3002/api/upload', formData, {
+        
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
 
       if (response.status === 200) {
+         response.data.secure_url;
+
         Swal.fire({
           icon: 'success',
           title: '¡Imagen subida al servidor!',
           text: response.data.message,
         });
-        
         setImage(null);
         setDescription(''); // Limpiar la descripción después de subir la imagen con éxito
-        <RenderImage actualizarImagenes={actualizarImagenes} />
 
     } else {
         Swal.fire({
@@ -70,7 +70,8 @@ export const UpdateImage = () => {
         <label htmlFor="image-upload" className="custom-file-upload">
           <i className="fas fa-cloud-upload-alt"></i> Selecciona una imagen
         </label>
-        <input type="file" id="image-upload" onChange={handleImageChange} />
+        <div className='input-image'>
+        <input type="file" id="image-upload" capture="" onChange={handleImageChange} />
         <input
           type="text"
           value={description}
@@ -78,6 +79,11 @@ export const UpdateImage = () => {
           placeholder="Agrega una descripción"
           className="input-description"
         />
+        <input type="text" placeholder='precio' className="input-description"/>
+        <input type="text" placeholder='precio' className="input-description"/>
+        </div>
+        
+
         <button onClick={handleImage} className="submit-button">
           Enviar
         </button>

@@ -1,5 +1,5 @@
 .container-navbar {
-    background-color: rgb(0, 0, 0, 0.1); /* Color de fondo del Navbar */
+  background: rgb(13,0,36);
     position: fixed; /* Fijar el Navbar en la parte superior */
     top: 0;
     left: 0;

@@ -1,4 +1,5 @@
 import './App.css';
+import Main from './components/main/Main';
 import { Navbar } from './components/navbar/Navbar';
 import {RenderImage}  from './components/renderImage/RenderImage';
 import {UpdateImage} from './components/updateImge/UpdateImage';
@@ -14,7 +15,9 @@ function App() {
         <Route path='/' element={<RenderImage />} />
 
           <Route path='/update' element={<UpdateImage />} />
+
         </Routes>
+        <Main/>
       </Router>
     </div>
   );
