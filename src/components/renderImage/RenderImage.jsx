@@ -60,19 +60,14 @@ export const RenderImage = () => {
       <div className="container-image">
         <div className="image-grid">
           {imagenGet.map((imagen) => (
-            
-              <div key={imagen.url} className="image-card">
-                {/* Utiliza la URL relativa del servidor para la imagen */}
-                <div className="image">
+            <div key={imagen.public_id} className="image-card">
+              <div className="image">
                 <img
-                  //src={`http://localhost:3002/${imagen.imageUrl}`}
-                  src={imagen.path}
-
-                  alt={imagen.filename}
+                  src={imagen.url} // O imagen.secure_url según tus necesidades
+                  alt={imagen.original_filename} // O el texto que desees
                   className="image-item"
                 />
-                </div>
-                
+              </div>
               <div className="container-description">
               <h2>{imagen.description}</h2>
 
