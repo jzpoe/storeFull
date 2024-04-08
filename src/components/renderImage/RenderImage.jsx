@@ -21,7 +21,7 @@ export const RenderImage = () => {
     renderImagen1();
   }, []);
 
-  const handleEliminarImagen = async (id) => {
+  const handleEliminarImagen = async (image) => {
     try {
       const result = await Swal.fire({
         icon: "warning",
@@ -33,7 +33,7 @@ export const RenderImage = () => {
 
       if (result.isConfirmed) {
         const response = await axios.delete(
-          `http://localhost:3002/api/delete/${id}`
+          `http://localhost:3002/api/delete/${image.public_id}`
         );
         Swal.fire({
           icon: "success",
