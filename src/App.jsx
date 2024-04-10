@@ -1,4 +1,5 @@
 import './App.css';
+import Footer from './components/footer/Footer';
 
 import { Navbar } from './components/navbar/Navbar';
 import {RenderImage}  from './components/renderImage/RenderImage';
@@ -20,7 +21,8 @@ function App() {
         </Routes>
         
       </Router>
-      
+      <Footer/>
+
     </div>
    
   );

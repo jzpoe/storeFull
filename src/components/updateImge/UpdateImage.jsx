@@ -8,6 +8,8 @@ import Swal from 'sweetalert2';
 export const UpdateImage = () => {
   const [image, setImage] = useState(null);
   const [description, setDescription] = useState('');
+  const [price, setPrice] = useState('');
+  const [talla, setTalla] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -19,6 +21,12 @@ export const UpdateImage = () => {
   const uploadImageName = (e) => {
     setDescription(e.target.value);
   };
+  const uploadPrice = (e) => {
+    setPrice(e.target.value);
+  };
+  const uploadTalla = (e) => {
+    setTalla(e.target.value);
+  };
   
   
   
@@ -28,6 +36,8 @@ export const UpdateImage = () => {
     formData.append('image', image);
     formData.append('upload_preset', 'mjxpq9vf'); // Aquí debes usar tu propio upload preset
     formData.append('description', description);
+ 
+
 
     try {
       const response = await axios.post('http://localhost:3002/api/upload', formData, {
@@ -35,7 +45,13 @@ export const UpdateImage = () => {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
+        
       });
+     
+
+      const publicId = response.data.images; // Obtén el publicId de la respuesta de Cloudinary
+      formData.append('imagenPublicId', publicId); // Agrega el public_id de la imagen
+      
 
       if (response.status === 200) {
          response.data.secure_url;
@@ -79,8 +95,8 @@ export const UpdateImage = () => {
           placeholder="Agrega una descripción"
           className="input-description"
         />
-        <input type="text" placeholder='precio' className="input-description"/>
-        <input type="text" placeholder='precio' className="input-description"/>
+        <input type="text" placeholder='precio' onChange={uploadPrice}  className="input-description"/>
+        <input type="text" placeholder='talla' onChange={uploadTalla} className="input-description"/>
         </div>
         
 

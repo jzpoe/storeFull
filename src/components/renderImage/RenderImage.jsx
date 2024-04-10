@@ -1,18 +1,26 @@
 import "./render.css";
 import axios from "axios";
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../header/Header";
 import Swal from "sweetalert2";
-import Footer from "../footer/Footer";
 
 export const RenderImage = () => {
   const [imagenGet, setImagenGet] = useState([]);
+  const [descripcion, setDescripcion] = useState([]);
+  const [price, setprice] = useState([]);
+  const [talla, setTalla] = useState([]);
 
   const renderImagen1 = async () => {
     try {
       const response = await axios.get("http://localhost:3002/api/render");
-      console.log(response.data);
-      setImagenGet(response.data);
+      console.log(response.data.images);
+      console.log(response.data.text);
+
+      setImagenGet(response.data.images);
+      setDescripcion(response.data.text);
+      setprice(response.data.price);
+      setTalla(response.data.talla);
+
     } catch (error) {
       console.error("Error al obtener las imágenes:", error);
     }
@@ -56,11 +64,12 @@ export const RenderImage = () => {
 
   return (
     <>
+    
       <Header />
 
       <div className="container-image">
         <div className="image-grid">
-          {imagenGet.map((imagen) => (
+          {imagenGet.map((imagen, index) => (
             <div key={imagen.public_id} className="image-card">
               <div className="image">
                 <img
@@ -68,19 +77,20 @@ export const RenderImage = () => {
                   alt={imagen.original_filename} // O el texto que desees
                   className="image-item"
                 />
-              </div>
-              <div className="container-description">
-              <h2>{imagen.description}</h2>
+                {/* Asociar la descripción con la imagen utilizando el mismo índice */}
+                <h2>{descripcion[index] && descripcion[index].description}</h2>
+                {/* <h2>{price[index] && price[index].price}</h2>
+                <h2>{talla[index] && talla[index].talla}</h2> */}
 
               </div>
-                <button onClick={handleEliminarImagen}  className="btn-delete">eliminar</button>
-              </div>
-            
+
+              <button onClick={() => handleEliminarImagen(imagen)} className="btn-delete">
+                Eliminar
+              </button>
+            </div>
           ))}
         </div>
-        <div>
-          <Footer/>
-        </div>
+
       </div>
     </>
   );

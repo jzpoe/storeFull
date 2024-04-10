@@ -1,7 +1,7 @@
 .container-image {
   background: #fff;
   width: 100%;
-  height: 120vh;
+  height: auto;
   margin: 0; /* Eliminar el margen para que las imágenes estén más pegadas al borde */
 }
 
