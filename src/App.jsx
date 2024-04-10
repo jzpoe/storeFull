@@ -1,5 +1,5 @@
 import './App.css';
-import Main from './components/main/Main';
+
 import { Navbar } from './components/navbar/Navbar';
 import {RenderImage}  from './components/renderImage/RenderImage';
 import {UpdateImage} from './components/updateImge/UpdateImage';
@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
+    
     <div >
       <Router>
         <Navbar />
@@ -17,9 +18,11 @@ function App() {
           <Route path='/update' element={<UpdateImage />} />
 
         </Routes>
-        <Main/>
+        
       </Router>
+      
     </div>
+   
   );
 }
 

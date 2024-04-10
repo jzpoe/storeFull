@@ -3,6 +3,7 @@ import axios from "axios";
 import  { useEffect, useState } from "react";
 import Header from "../header/Header";
 import Swal from "sweetalert2";
+import Footer from "../footer/Footer";
 
 export const RenderImage = () => {
   const [imagenGet, setImagenGet] = useState([]);
@@ -77,7 +78,9 @@ export const RenderImage = () => {
             
           ))}
         </div>
-        <div></div>
+        <div>
+          <Footer/>
+        </div>
       </div>
     </>
   );

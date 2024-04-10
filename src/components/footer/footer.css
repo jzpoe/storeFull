@@ -1,0 +1,121 @@
+.contenido-superior {
+  margin-bottom: 20px; /* Agrega espacio entre el contenido superior y el footer */
+  
+}
+
+/* Estilos base del footer */
+.footer {
+  position: relative;
+  background-color: #1d1919; /* Cambia el color de fondo según tus preferencias */
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+  
+}
+
+.footer-section {
+  flex: 1 1 250px;
+}
+
+.footer-section-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  margin: 10px;
+  color: #fff;
+}
+
+.img-gmail{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.footer-section p {
+  margin: 0;
+  color: #fff;
+
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 5px 0;
+  color: #fff;
+
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 98.4%;
+  height: 90px; /* Altura de la ola */
+  background: url('https://www.transparenttextures.com/patterns/axiom-pattern.png'); /* Patrón de la ola */
+  animation: wave 2s infinite linear alternate;
+}
+
+@keyframes wave {
+  0% {
+    transform: skewX(25deg);
+  }
+  50% {
+    transform: skewX(-25deg);
+  }
+  100% {
+    transform: skewX(25deg);
+  }
+}
+
+/* Estilos para pantallas de hasta 767px */
+@media screen and (max-width: 767px) {
+  .footer-section {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+  .footer {
+    position: relative;
+    background-color: #1d1919; /* Cambia el color de fondo según tus preferencias */
+    height: 447px; /* Ajusta la altura según tus necesidades */
+  }
+  .wave {
+    
+    width: 95.3%;
+    
+  }
+}
+
+/* Estilos para pantallas de 768px a 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .footer-section {
+    flex-basis: 50%;
+  }
+  .footer {
+    position: relative;
+    background-color: #1d1919; /* Cambia el color de fondo según tus preferencias */
+    height: auto; /* Ajusta la altura según tus necesidades */
+  }
+}
+
