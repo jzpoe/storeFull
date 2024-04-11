@@ -1,12 +1,6 @@
-.contenido-superior {
-  margin-bottom: 20px; /* Agrega espacio entre el contenido superior y el footer */
-  
-}
-
-/* Estilos base del footer */
 .footer {
   position: relative;
-  background-color: #1d1919; /* Cambia el color de fondo según tus preferencias */
+  background-color: #1d1919; /* Color de fondo del footer */
 }
 
 .footer-content {
@@ -14,7 +8,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 20px;
-  
 }
 
 .footer-section {
@@ -25,10 +18,10 @@
   font-size: 20px;
   margin-bottom: 15px;
   margin: 10px;
-  color: #fff;
+  color: #fff; /* Color del título de la sección */
 }
 
-.img-gmail{
+.img-gmail {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -36,19 +29,16 @@
 
 .footer-section p {
   margin: 0;
-  color: #fff;
-
+  color: #fff; /* Color del texto de la sección */
 }
 
 .footer-section ul {
   list-style: none;
   padding: 0;
-  
 }
 
 .footer-section ul li {
   margin-bottom: 10px;
-  
 }
 
 .footer-section ul li a {
@@ -63,10 +53,10 @@
 
 .footer-bottom p {
   margin: 5px 0;
-  color: #fff;
-
+  color: #fff; /* Color del texto del footer */
 }
 
+/* Ola de fondo */
 .wave {
   position: absolute;
   bottom: 0;
@@ -89,33 +79,26 @@
   }
 }
 
-/* Estilos para pantallas de hasta 767px */
+/* Media queries para pantallas de hasta 767px (pequeñas) */
 @media screen and (max-width: 767px) {
   .footer-section {
-    flex-basis: 100%;
-    margin-bottom: 30px;
+    flex-basis: 100%; /* Ajusta el tamaño de la sección para ocupar todo el ancho */
+    margin-bottom: 30px; /* Agrega espacio entre las secciones */
   }
   .footer {
-    position: relative;
-    background-color: #1d1919; /* Cambia el color de fondo según tus preferencias */
-    height: 447px; /* Ajusta la altura según tus necesidades */
+    height: auto; /* Ajusta la altura automáticamente */
   }
   .wave {
-    
-    width: 95.3%;
-    
+    width: 95.3%; /* Ajusta el ancho de la ola */
   }
 }
 
-/* Estilos para pantallas de 768px a 1024px */
+/* Media queries para pantallas de 768px a 1024px (medianas) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .footer-section {
-    flex-basis: 50%;
+    flex-basis: 50%; /* Divide las secciones en dos columnas */
   }
   .footer {
-    position: relative;
-    background-color: #1d1919; /* Cambia el color de fondo según tus preferencias */
-    height: auto; /* Ajusta la altura según tus necesidades */
+    height: auto; /* Ajusta la altura automáticamente */
   }
 }
-

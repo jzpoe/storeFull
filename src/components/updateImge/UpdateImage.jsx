@@ -1,5 +1,7 @@
 
 
+
+
 import './update.css';
 import axios from 'axios';
 import  { useState } from 'react';
@@ -13,7 +15,6 @@ export const UpdateImage = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  
   const handleImageChange = (e) => {
     setImage(e.target.files[0]);
   };
@@ -21,50 +22,48 @@ export const UpdateImage = () => {
   const uploadImageName = (e) => {
     setDescription(e.target.value);
   };
+  
   const uploadPrice = (e) => {
     setPrice(e.target.value);
   };
+
   const uploadTalla = (e) => {
     setTalla(e.target.value);
   };
   
-  
-  
-
   const handleImage = async () => {
+    setLoading(true); // Establecer loading a true antes de la solicitud
+
     const formData = new FormData();
     formData.append('image', image);
-    formData.append('upload_preset', 'mjxpq9vf'); // Aquí debes usar tu propio upload preset
+    formData.append('upload_preset', 'mjxpq9vf');
     formData.append('description', description);
- 
-
+    formData.append('price', price);
+    formData.append('talla', talla);
 
     try {
       const response = await axios.post('http://localhost:3002/api/upload', formData, {
-        
         headers: {
           'Content-Type': 'multipart/form-data',
         },
-        
       });
-     
 
-      const publicId = response.data.images; // Obtén el publicId de la respuesta de Cloudinary
-      formData.append('imagenPublicId', publicId); // Agrega el public_id de la imagen
+      setLoading(false); // Establecer loading a false después de la solicitud
       
+      const publicId = response.data.images;
+      formData.append('imagenPublicId', publicId);
 
       if (response.status === 200) {
-         response.data.secure_url;
-
         Swal.fire({
           icon: 'success',
           title: '¡Imagen subida al servidor!',
           text: response.data.message,
         });
         setImage(null);
-        setDescription(''); // Limpiar la descripción después de subir la imagen con éxito
-
-    } else {
+        setDescription('');
+        setPrice('');
+        setTalla('');
+      } else {
         Swal.fire({
           icon: 'error',
           title: '¡Error al subir la imagen!',
@@ -72,6 +71,7 @@ export const UpdateImage = () => {
         });
       }
     } catch (error) {
+      setLoading(false); // Establecer loading a false en caso de error
       console.error('Error al subir imagen al servidor:', error.response);
       setError('Error al subir la imagen');
     }
@@ -87,28 +87,25 @@ export const UpdateImage = () => {
           <i className="fas fa-cloud-upload-alt"></i> Selecciona una imagen
         </label>
         <div className='input-image'>
-        <input type="file" id="image-upload" capture="" onChange={handleImageChange} />
-        <input
-          type="text"
-          value={description}
-          onChange={uploadImageName}
-          placeholder="Agrega una descripción"
-          className="input-description"
-        />
-        <input type="text" placeholder='precio' onChange={uploadPrice}  className="input-description"/>
-        <input type="text" placeholder='talla' onChange={uploadTalla} className="input-description"/>
+          <input type="file" id="image-upload" capture="" onChange={handleImageChange} />
+          <input
+            type="text"
+            value={description}
+            onChange={uploadImageName}
+            placeholder="Agrega una descripción"
+            className="input-description"
+          />
+          <input type="text" placeholder='precio' onChange={uploadPrice}  className="input-description"/>
+          <input type="text" placeholder='talla' onChange={uploadTalla} className="input-description"/>
         </div>
-        
 
-        <button onClick={handleImage} className="submit-button">
-          Enviar
+        <button onClick={handleImage} className="submit-button" disabled={loading}> {/* Deshabilitar el botón mientras se está cargando */}
+          {loading ? 'Cargando...' : 'Enviar'}
         </button>
         {error && <div className="error-message">{error}</div>}
       </div>
-      
     </div>
-    
   );
- 
 };
+ 
 

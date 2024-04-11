@@ -75,3 +75,34 @@
     height: 100px;
    
   }
+  @media screen and (max-width: 767px) {
+    .ul-navbar {
+display: flex;      
+align-items: center; /* Centra los elementos */
+    }
+  
+    .navbar-li,
+    .centered-element,
+    .right-aligned {
+      margin: 10px 0; /* Ajusta el margen entre elementos */
+    }
+  
+    .right-aligned {
+      margin-left: 0; /* Reinicia el margen izquierdo */
+      text-align: center; /* Centra el texto */
+    }
+  }
+  
+  /* Estilos para pantallas de 768px a 1024px (medianas) */
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .right-aligned {
+      margin-left: 200px; /* Ajusta el margen izquierdo para pantallas medianas */
+    }
+  }
+  
+  /* Estilos para pantallas de más de 1024px (grandes) */
+  @media screen and (min-width: 1025px) {
+    .right-aligned {
+      margin-left: 540px; /* Ajusta el margen izquierdo para pantallas grandes */
+    }
+  }

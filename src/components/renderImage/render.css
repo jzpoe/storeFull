@@ -7,10 +7,7 @@
 
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(380px, 1fr)
-  ); /* Cuadrícula de imágenes responsiva */
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); /* Cuadrícula de imágenes responsiva */
   gap: 7px;
   margin-left: 100px;
   margin-top: 70px;
@@ -59,6 +56,7 @@
   justify-content: center;
   padding: 10px;
 }
+
 .container-description {
   display: flex;
   justify-content: center;
@@ -89,4 +87,33 @@ h2 {
 /* Estilo cuando se pasa el mouse sobre el botón */
 .btn-delete:hover {
   background-color: darkred; /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Media queries para pantallas medianas */
+@media (max-width: 992px) {
+  .image-grid {
+    margin-left: 50px; /* Ajusta el margen izquierdo para pantallas medianas */
+    margin-top: 50px; /* Ajusta el margen superior para pantallas medianas */
+  }
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta el tamaño de las imágenes para pantallas pequeñas */
+    margin-left: 20px; /* Ajusta el margen izquierdo para pantallas pequeñas */
+    margin-top: 20px; /* Ajusta el margen superior para pantallas pequeñas */
+  }
+}
+
+/* Media queries para pantallas extra pequeñas */
+@media (max-width: 576px) {
+  .image-item {
+    width: 100%; /* Las imágenes ocuparán el ancho completo para pantallas extra pequeñas */
+  }
+
+  .image-grid {
+    margin-left: 10px; /* Ajusta el margen izquierdo para pantallas extra pequeñas */
+    margin-top: 10px; /* Ajusta el margen superior para pantallas extra pequeñas */
+  }
 }

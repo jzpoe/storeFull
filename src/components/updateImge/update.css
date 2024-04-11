@@ -1,12 +1,13 @@
 .image-upload-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction:row-reverse;
-    margin-top: 140px;
-    width: 100%;
-    background-color: #4851b1;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin-top: 140px;
+  width: 100%;
+  background-color: #4851b1;
+}
+
   
   .image-preview {
     margin-bottom: 20px;
@@ -90,3 +91,34 @@ height: 500px;
     color: red;
     margin-top: 10px;
   }
+
+  /* Estilos para pantallas de hasta 767px (pequeñas) */
+@media screen and (max-width: 767px) {
+  .image-upload-container {
+    flex-direction: column; /* Cambia la dirección de la columna para pantallas medianas */
+    align-items: center; /* Centra los elementos en pantallas medianas */
+  }
+  .image-form {
+    width: 90%; /* Ancho del formulario para pantallas pequeñas */
+  }
+}
+
+/* Estilos para pantallas de 768px a 1024px (medianas) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .image-upload-container {
+    flex-direction: column; /* Cambia la dirección de la columna para pantallas medianas */
+    align-items: center; /* Centra los elementos en pantallas medianas */
+  }
+
+  .image-form {
+    width: 70%; /* Ancho del formulario para pantallas medianas */
+  }
+}
+
+/* Estilos para pantallas de más de 1024px (grandes) */
+@media screen and (min-width: 1025px) {
+  .image-form {
+    width: 50%; /* Ancho del formulario para pantallas grandes */
+  }
+  
+}

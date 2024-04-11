@@ -18,8 +18,8 @@ export const RenderImage = () => {
 
       setImagenGet(response.data.images);
       setDescripcion(response.data.text);
-      setprice(response.data.price);
-      setTalla(response.data.talla);
+      setprice(response.data.text);
+      setTalla(response.data.text);
 
     } catch (error) {
       console.error("Error al obtener las imágenes:", error);
@@ -79,8 +79,8 @@ export const RenderImage = () => {
                 />
                 {/* Asociar la descripción con la imagen utilizando el mismo índice */}
                 <h2>{descripcion[index] && descripcion[index].description}</h2>
-                {/* <h2>{price[index] && price[index].price}</h2>
-                <h2>{talla[index] && talla[index].talla}</h2> */}
+                <h2>{price[index] && price[index].price}</h2>
+                <h2>{talla[index] && talla[index].talla}</h2>
 
               </div>
 
