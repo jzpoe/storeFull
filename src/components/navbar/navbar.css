@@ -85,6 +85,7 @@ align-items: center; /* Centra los elementos */
     .centered-element,
     .right-aligned {
       margin: 10px 0; /* Ajusta el margen entre elementos */
+      font-size: 10px;
     }
   
     .right-aligned {

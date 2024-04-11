@@ -1,105 +1,106 @@
 .footer {
-  position: relative;
-  background-color: #1d1919; /* Color de fondo del footer */
+  background-color: #333;
+  color: #fff;
+  padding: 50px 20px;
 }
 
 .footer-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 20px;
 }
 
 .footer-section {
-  flex: 1 1 250px;
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-section-contact {
+  margin-bottom: 20px;
 }
 
 .footer-section-title {
-  font-size: 20px;
-  margin-bottom: 15px;
-  margin: 10px;
-  color: #fff; /* Color del título de la sección */
-}
-
-.img-gmail {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-.footer-section p {
-  margin: 0;
-  color: #fff; /* Color del texto de la sección */
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section ul li {
+  font-size: 18px;
   margin-bottom: 10px;
 }
 
-.footer-section ul li a {
-  color: #fff;
-  text-decoration: none;
+.clase-p {
+  margin-bottom: 5px;
+}
+
+.footer-section-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section-links ul li {
+  margin-bottom: 10px;
+}
+
+.img-gmail {
+  width: 30px;
+  height: auto;
 }
 
 .footer-bottom {
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: center;
 }
 
-.footer-bottom p {
-  margin: 5px 0;
-  color: #fff; /* Color del texto del footer */
+.clase-p1 {
+  font-size: 14px;
 }
 
-/* Ola de fondo */
-.wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 98.4%;
-  height: 90px; /* Altura de la ola */
-  background: url('https://www.transparenttextures.com/patterns/axiom-pattern.png'); /* Patrón de la ola */
-  animation: wave 2s infinite linear alternate;
-}
-
-@keyframes wave {
-  0% {
-    transform: skewX(25deg);
-  }
-  50% {
-    transform: skewX(-25deg);
-  }
-  100% {
-    transform: skewX(25deg);
-  }
-}
-
-/* Media queries para pantallas de hasta 767px (pequeñas) */
 @media screen and (max-width: 767px) {
-  .footer-section {
-    flex-basis: 100%; /* Ajusta el tamaño de la sección para ocupar todo el ancho */
-    margin-bottom: 30px; /* Agrega espacio entre las secciones */
+  .footer{
+    width: 100%;
+    height: 600px;
+    margin-top: 20px;
   }
-  .footer {
-    height: auto; /* Ajusta la altura automáticamente */
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-section-contact h2{
+    display: flex;
+    justify-content: center;
+  }
+.footer-section-links{
+  flex-direction: column;
+}
+  .footer-section {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .clase-p{
+    width: 300px;
+  }
+  .clase-p1{
+    width: 300px;
+  }
+  .clase-p2{
+    width: 350px;
+  }
+  .footer-bottom{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-section:last-child {
+    margin-bottom: 0;
+  }
+  .footer-section-social{
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     
   }
-  .wave {
-    width: 95.3%; /* Ajusta el ancho de la ola */
-  }
-}
-
-/* Media queries para pantallas de 768px a 1024px (medianas) */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .footer-section {
-    flex-basis: 50%; /* Divide las secciones en dos columnas */
-  }
-  .footer {
-    height: auto; /* Ajusta la altura automáticamente */
+  svg{
+    flex-direction: row;
+    width: 50px;
+    height: 50px;
   }
 }
