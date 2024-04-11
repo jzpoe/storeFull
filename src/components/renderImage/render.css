@@ -103,8 +103,17 @@ h2 {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta el tamaño de las imágenes para pantallas pequeñas */
     margin-left: 20px; /* Ajusta el margen izquierdo para pantallas pequeñas */
     margin-top: 20px; /* Ajusta el margen superior para pantallas pequeñas */
+    
   }
 }
+
+@media (max-width: 767px) {
+  .container-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+} 
 
 /* Media queries para pantallas extra pequeñas */
 @media (max-width: 576px) {
