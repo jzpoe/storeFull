@@ -42,7 +42,7 @@ export const UpdateImage = () => {
     formData.append('talla', talla);
 
     try {
-      const response = await axios.post('http://localhost:3002/api/upload', formData, {
+      const response = await axios.post('https://storefullserver-production.up.railway.app/api/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

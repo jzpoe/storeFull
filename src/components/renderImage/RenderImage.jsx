@@ -12,7 +12,7 @@ export const RenderImage = () => {
 
   const renderImagen1 = async () => {
     try {
-      const response = await axios.get("http://localhost:3002/api/render");
+      const response = await axios.get("https://storefullserver-production.up.railway.app/api/render");
       console.log(response.data.images);
       console.log(response.data.text);
 
@@ -42,7 +42,7 @@ export const RenderImage = () => {
 
       if (result.isConfirmed) {
         const response = await axios.delete(
-          `http://localhost:3002/api/delete/${image.public_id}`
+          `https://storefullserver-production.up.railway.app/${image.public_id}`
         );
         Swal.fire({
           icon: "success",
