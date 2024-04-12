@@ -1,10 +1,11 @@
 .image-upload-container {
   display: flex;
-  justify-content: center;
+  justify-content:space-around;
   align-items: center;
   flex-direction: row-reverse;
-  margin-top: 140px;
+  margin-top: 100px;
   width: 100%;
+  height: 500px;
   background-color: #4851b1;
 }
 
@@ -30,17 +31,15 @@
     border-radius: 10px ;
     padding: 20px; /* Espacio interno */
     margin-bottom: 20px; /* Margen inferior para separar las tarjetas */
-
-
-width: 30%;
-height: 500px;
+width: 28%;
+height: 392px;
   }
   .image-form input {
 
     margin-right: 200px;
   }
   .input-image{
-    width: 200px;
+    width: 250px;
     
   }
   
@@ -97,6 +96,7 @@ height: 500px;
   .image-upload-container {
     flex-direction: column; /* Cambia la dirección de la columna para pantallas medianas */
     align-items: center; /* Centra los elementos en pantallas medianas */
+    
   }
   .image-form {
     width: 90%; /* Ancho del formulario para pantallas pequeñas */
@@ -116,9 +116,5 @@ height: 500px;
 }
 
 /* Estilos para pantallas de más de 1024px (grandes) */
-@media screen and (min-width: 1025px) {
-  .image-form {
-    width: 50%; /* Ancho del formulario para pantallas grandes */
-  }
+
   
-}

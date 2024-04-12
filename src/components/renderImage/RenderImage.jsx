@@ -1,34 +1,17 @@
 import "./render.css";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import {dataContext} from "../context/DataContext"
 import Header from "../header/Header";
 import Swal from "sweetalert2";
 
-export const RenderImage = () => {
-  const [imagenGet, setImagenGet] = useState([]);
-  const [descripcion, setDescripcion] = useState([]);
-  const [price, setprice] = useState([]);
-  const [talla, setTalla] = useState([]);
+export const RenderImage = ({gender}) => {
 
-  const renderImagen1 = async () => {
-    try {
-      const response = await axios.get("https://storefullserver-production.up.railway.app/api/render");
-      console.log(response.data.images);
-      console.log(response.data.text);
+const {imagenGet, descripcion, price, talla, renderImagen1} = useContext(dataContext)
 
-      setImagenGet(response.data.images);
-      setDescripcion(response.data.text);
-      setprice(response.data.text);
-      setTalla(response.data.text);
-
-    } catch (error) {
-      console.error("Error al obtener las imágenes:", error);
-    }
-  };
-
-  useEffect(() => {
-    renderImagen1();
-  }, []);
+ 
+renderImagen1()
+  
 
   const handleEliminarImagen = async (image) => {
     try {
@@ -69,6 +52,8 @@ export const RenderImage = () => {
 
       <div className="container-image">
         <div className="image-grid">
+          
+        
           {imagenGet.map((imagen, index) => (
             <div key={imagen.public_id} className="image-card">
               <div className="image">

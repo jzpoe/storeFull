@@ -14,7 +14,7 @@
     display: flex; /* Mostrar los elementos en línea */
     list-style-type: none; /* Quitar los puntos de la lista */
     padding: 0; /* Eliminar el espacio interior de la lista */
-    justify-content: space-between; /* Distribuir elementos en el contenedor */
+    align-items: center;
 
   }
   
@@ -22,7 +22,8 @@
   .centered-element,
   .right-aligned
    {
-    margin-right: 20px; /* Espacio entre elementos del Navbar */
+    margin-right: 10px; /* Espacio entre elementos del Navbar */
+    width: 130px;
   }
   
   .navbar-li a {
@@ -50,14 +51,19 @@
 
   .centered-element{
    color: #fff;
-    margin-left: 200px;
+    margin-left: 300px;
+    width: 200px;
   }
 
   .right-aligned {
-    margin-left: 540px; /* Ajusta el margen derecho según sea necesario */
+    margin-left: 3px; /* Ajusta el margen derecho según sea necesario */
   }
 
-  
+  .right-aligned2{
+    width: 140px;
+    margin-left: 270px; /* Ajusta el margen derecho según sea necesario */
+
+  }
 
    .centered-element
    right-aligned, a {
@@ -101,9 +107,4 @@ align-items: center; /* Centra los elementos */
     }
   }
   
-  /* Estilos para pantallas de más de 1024px (grandes) */
-  @media screen and (min-width: 1025px) {
-    .right-aligned {
-      margin-left: 540px; /* Ajusta el margen izquierdo para pantallas grandes */
-    }
-  }
+  
