@@ -8,6 +8,8 @@ const DataProvider = ({ children }) => {
   const [descripcion, setDescripcion] = useState([]);
   const [price, setPrice] = useState([]);
   const [talla, setTalla] = useState([]);
+  const [selectProduct, setSelectProduct] = useState([]);
+
 
   const renderImagen1 = async () => {
     try {
@@ -26,7 +28,7 @@ const DataProvider = ({ children }) => {
   }, []);
 
   return (
-    <dataContext.Provider value={{ imagenGet, descripcion, price, talla, renderImagen1 }}>
+    <dataContext.Provider value={{ imagenGet, descripcion, price, talla, renderImagen1, selectProduct, setSelectProduct }}>
       {children}
     </dataContext.Provider>
   );

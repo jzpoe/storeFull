@@ -1,17 +1,10 @@
-import "./render.css";
-import axios from "axios";
-import { useContext, useEffect, useState } from "react";
-import {dataContext} from "../context/DataContext"
+import { useContext } from "react";
+import { dataContext } from "../context/DataContext";
 import Header from "../header/Header";
 import Swal from "sweetalert2";
 
-export const RenderImage = ({gender}) => {
-
-const {imagenGet, descripcion, price, talla, renderImagen1} = useContext(dataContext)
-
- 
-renderImagen1()
-  
+export const RenderImage = ({ gender }) => {
+  const { imagenGet, descripcion, price, talla, renderImagen1 } = useContext(dataContext);
 
   const handleEliminarImagen = async (image) => {
     try {
@@ -47,35 +40,27 @@ renderImagen1()
 
   return (
     <>
-    
       <Header />
-
       <div className="container-image">
         <div className="image-grid">
-          
-        
           {imagenGet.map((imagen, index) => (
             <div key={imagen.public_id} className="image-card">
               <div className="image">
                 <img
-                  src={imagen.url} // O imagen.secure_url según tus necesidades
-                  alt={imagen.original_filename} // O el texto que desees
+                  src={imagen.url}
+                  alt={imagen.original_filename}
                   className="image-item"
                 />
-                {/* Asociar la descripción con la imagen utilizando el mismo índice */}
                 <h2>{descripcion[index] && descripcion[index].description}</h2>
                 <h2>{price[index] && price[index].price}</h2>
                 <h2>{talla[index] && talla[index].talla}</h2>
-
               </div>
-
               <button onClick={() => handleEliminarImagen(imagen)} className="btn-delete">
                 Eliminar
               </button>
             </div>
           ))}
         </div>
-
       </div>
     </>
   );
