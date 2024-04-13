@@ -1,11 +1,13 @@
+import "./render.css"
 import { useContext } from "react";
 import { dataContext } from "../context/DataContext";
 import Header from "../header/Header";
 import Swal from "sweetalert2";
+import axios from "axios";
 
-export const RenderImage = ({ gender }) => {
-  const { imagenGet, descripcion, price, talla, renderImagen1 } = useContext(dataContext);
-
+export const RenderImage = () => {
+  const { imagenGet, descripcion, price, talla, renderImagen1, selectProduct, setSelectProduct } = useContext(dataContext);
+  
   const handleEliminarImagen = async (image) => {
     try {
       const result = await Swal.fire({
@@ -38,6 +40,11 @@ export const RenderImage = ({ gender }) => {
     }
   };
 
+  const addCartProduct = (imagen) => {
+console.log(imagen);
+setSelectProduct([...selectProduct, imagen])
+  }
+
   return (
     <>
       <Header />
@@ -57,6 +64,9 @@ export const RenderImage = ({ gender }) => {
               </div>
               <button onClick={() => handleEliminarImagen(imagen)} className="btn-delete">
                 Eliminar
+              </button>
+              <button onClick={() => addCartProduct(imagen)} className="btn-delete">
+                agregar
               </button>
             </div>
           ))}
