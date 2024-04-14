@@ -28,7 +28,7 @@ const Header = () => {
 
   return (
     <div className="container-swiper">
-      <Swiper
+      {/* <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={50}
@@ -59,8 +59,10 @@ const Header = () => {
           </div>
         </SwiperSlide>
         {/* Agrega más imágenes según sea necesario */}
-      </Swiper>
-    </div>
+      {/* </Swiper> */}
+
+      <h1 className="container-h1">TU TIENDA VIRTUAL</h1>
+    </div> 
   );
 };
 

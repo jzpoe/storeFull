@@ -12,6 +12,12 @@
   .menu-icon{
     display: none;
   }
+  svg{
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
   .ul-navbar {
     display: flex; /* Mostrar los elementos en línea */
