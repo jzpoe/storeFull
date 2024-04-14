@@ -4,6 +4,8 @@ import { dataContext } from "../context/DataContext";
 import Header from "../header/Header";
 import Swal from "sweetalert2";
 import axios from "axios";
+import { CiHeart } from "react-icons/ci";
+
 
 export const RenderImage = () => {
   const { imagenGet, descripcion, price, talla, renderImagen1, selectProduct, setSelectProduct } = useContext(dataContext);
@@ -62,13 +64,17 @@ setSelectProduct([...selectProduct, imagen])
                 <h2>{price[index] && price[index].price}</h2>
                 <h2>{talla[index] && talla[index].talla}</h2>
               </div>
-              <button onClick={() => handleEliminarImagen(imagen)} className="btn-delete">
+              {/* <button onClick={() => handleEliminarImagen(imagen)} className="btn-delete">
                 Eliminar
-              </button>
+              </button> */}
+              
               <button onClick={() => addCartProduct(imagen)} className="btn-delete">
-                agregar
+                
+              <CiHeart className={selectProduct.some((item) => item.imagen === item.imagen) ? 'red-heart' : ''} />
               </button>
+              
             </div>
+            
           ))}
         </div>
       </div>
