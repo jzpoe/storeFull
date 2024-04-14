@@ -1,7 +1,19 @@
 import './navbar.css'
 import { Link } from 'react-router-dom';
 
-export const Navbar = ({gender}) => {
+import  {useContext, useEffect, useState}  from "react";
+import { dataContext } from "../context/DataContext";
+
+
+export const Navbar = () => {
+  const { selectProduct } = useContext(dataContext);
+  const [cartItemCount, setCartItemCount] = useState([]);
+
+
+  useEffect(() => {
+    // Actualizar la cantidad de elementos en el carrito cuando selectProduct cambie
+    setCartItemCount(selectProduct.length);
+  }, [selectProduct]);
 
   return (
     <nav className="container-navbar">
@@ -19,9 +31,15 @@ export const Navbar = ({gender}) => {
             <li className="right-aligned2">
                 <Link to= "/update" >| SELECCIONAR |</Link>
                 </li>
+
             <li className="right-aligned">
-            <Link to= "/content" >| CART |</Link>
+              
+              <Link to= "/content" >| CART | {cartItemCount}
+              </Link>
+           
             </li>
+             
+            
             
         </ul>
 

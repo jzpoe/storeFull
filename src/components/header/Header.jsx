@@ -14,7 +14,12 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 
+
+
+
 const Header = () => {
+
+
   const handleSlideChange = () => {
     // Agrega una clase al texto para aplicar la animación
     const textElement = document.querySelector(".animated-text");

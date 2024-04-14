@@ -1,7 +1,9 @@
-import { useContext } from "react";
-import { dataContext } from "../context/DataContext";
+
+import  {useContext}  from "react";
+import {dataContext} from "../context/DataContext";
 
 export const CartContent = () => {
+
   const { selectProduct } = useContext(dataContext);
   
 
