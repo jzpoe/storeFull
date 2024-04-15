@@ -1,0 +1,107 @@
+.container-body{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 90vh;
+    margin: 10px;
+}
+.container-swiper-body{
+}
+
+.body-image{
+    width: auto;
+    height: 300px;
+    margin-top: 50px;
+}
+
+
+
+.contenido1 {
+    flex: 1;
+    padding: 20px;
+    width: 20px;
+  }
+
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 3%;
+    width: 80%; /* Ancho relativo al contenedor padre */
+    max-width: 400px; /* Ancho máximo en píxeles para evitar que la card se vuelva demasiado ancha en pantallas grandes */
+    margin-left: auto; /* Centra la card horizontalmente */
+    margin-right: auto; /* Centra la card horizontalmente */
+  }
+
+.contenido2{
+      flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+width: 80%;
+}
+
+.contenido2 img{
+    height: 700px;
+    max-width: 768px; /* Ajusta la imagen al ancho del contenedor */
+    margin-right: 200px;
+}
+h2 {
+    font-size: 3vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+  }
+  
+  p {
+    font-size: 2vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+  }
+.container-p-body{
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+    .container-body {
+      flex-direction: column; /* Cambia la dirección del flex a columna */
+      align-items: center; /* Centra los elementos horizontalmente */
+      height: auto; /* Cambia la altura automática */
+      padding: 10px; /* Reducir el relleno */
+    }
+    .body-image {
+        width: 100%; /* Ancho relativo al contenedor */
+        max-width: 100%; /* Ancho máximo relativo al contenedor */
+        height: auto; /* Altura automática para mantener la proporción */
+      }
+  
+    .contenido1 {
+      width: 100%; /* Ocupa todo el ancho */
+      margin-bottom: 20px; /* Añade un margen inferior */
+    }
+  
+    .card {
+      margin-left: 0; /* Elimina el margen izquierdo */
+      margin-right: 0; /* Elimina el margen derecho */
+      height: auto; /* Cambia la altura automática */
+      max-width: 767px; /* Ancho máximo en píxeles para evitar que la card se vuelva demasiado ancha en pantallas grandes */
+
+    }
+  
+    .contenido2 img {
+      max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+      height: auto; /* Mantiene la proporción de aspecto */
+      margin-right: 0; /* Elimina el margen derecho */
+    }
+  
+    h2, p {
+      text-align: center; /* Centra el texto */
+    }
+  }
+  
+  /* Estilos para pantallas de 768px a 1024px (medianas) */
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .card {
+        max-width: 768px; /* Ajusta la imagen al ancho del contenedor */
+    }
+    .contenido2 img {
+        max-width: 768px; /* Ajusta la imagen al ancho del contenedor */
+
+  }

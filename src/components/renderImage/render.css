@@ -1,8 +1,12 @@
 .container-image {
-  background: #fff;
+  position: relative; /* Asegura que el contenido no se superponga al fondo */
+  overflow: hidden; /* Oculta el desbordamiento del contenido */
   width: 100%;
-  height: auto;
-  margin: 0; /* Eliminar el margen para que las imágenes estén más pegadas al borde */
+  height: 100%;
+  background-image: url('/body/cielo-otonal.jpg');
+  background-size: cover; /* Ajusta el tamaño de la imagen de fondo para cubrir completamente el contenedor */
+  background-position: center; /* Centra la imagen de fondo */
+  background-attachment: fixed; /* Fija la imagen de fondo para crear el efecto de paralaje */
 }
 
 .image-grid {
@@ -18,27 +22,16 @@
   max-width: 100%; /* La imagen no superará el ancho del contenedor */
   height: 273px;
   width: 265px;
+  border-radius: 20px;
 }
 
-.container-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh; /* Altura del header del 80% del viewport height */
-  background-color: #333; /* Color de fondo del header */
-}
 
-.container-header img {
-  width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
-  height: 100%; /* La imagen ocupará el 100% de la altura del contenedor */
-  object-fit: fill; /* Hace que la imagen cubra todo el espacio del contenedor, manteniendo su relación de aspecto */
-}
 
 .image-card {
   
   height: 480px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9); /* Sombras suaves */
   width: 300px;
   overflow: hidden; /* Para que los bordes redondeados se apliquen correctamente */
 }
@@ -103,6 +96,8 @@ h2 {
     margin-top: 20px; /* Ajusta el margen superior para pantallas pequeñas */
     
   }
+
+  
 }
 
 @media (max-width: 767px) {
@@ -112,12 +107,22 @@ h2 {
     justify-content: center;
   }
 
+  image-card{
+    max-width: 767px;
+    width: 200px;
+    height: 350PX;
+  }
+  .image{
+    max-width: 768px;
+    width: 300px;
+  }
+
   .image-item {
-    width: 80%; /* Las imágenes ocuparán el ancho completo para pantallas extra pequeñas */
+    max-width: 768px;
+
+    width: 200px; /* Las imágenes ocuparán el ancho completo para pantallas extra pequeñas */
     height: 200px;
   }
-  .image-card{
-    height: 450px;
-  }
+  
 } 
 

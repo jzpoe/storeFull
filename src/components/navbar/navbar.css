@@ -1,95 +1,111 @@
 .container-navbar {
-  background: rgb(13,0,36);
-    position: fixed; /* Fijar el Navbar en la parte superior */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    z-index: 1000; /* Asegura que el Navbar esté por encima de otros elementos */
-    display: flex;
-    align-items: center;
-  }
-  .menu-icon{
-    display: none;
-  }
-  svg{
-    color: red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .ul-navbar {
-    display: flex; /* Mostrar los elementos en línea */
-    list-style-type: none; /* Quitar los puntos de la lista */
-    padding: 0; /* Eliminar el espacio interior de la lista */
-    align-items: center;
+  position: fixed; /* Fijar el Navbar en la parte superior */
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100px;
+  z-index: 1000; /* Asegura que el Navbar esté por encima de otros elementos */
+  display: flex;
+  justify-content: space-between; /* Espacio uniforme entre los elementos */
+  align-items: center;
+}
 
-  }
-  
-  .navbar-li,
-  .centered-element,
-  .right-aligned
-   {
-    margin-right: 10px; /* Espacio entre elementos del Navbar */
-    width: 130px;
-  }
-  
-  .navbar-li a {
-    font-family: sans-serif;
-    font-size: 16.2 px;
-    font-weight: bold;
-    color: #fff; /* Color del texto de los enlaces */
-    text-decoration: none solid rgb(49,30,214); /* Quitar subrayado de los enlaces */
-    padding: 10px; /* Espacio interno de los enlaces */
-    border-radius: 5px; /* Bordes redondeados */
-    transition: background-color 0.3s ease; /* Efecto de transición al pasar el mouse */
-  }
-  
-  .navbar-li a:hover {
-    background-color: rgb(49,30,214); /* Color de fondo al pasar el mouse */
-  }
+.logo {
+  z-index: 1000; /* Asegura que el Navbar esté por encima de otros elementos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 100px; /* Mueve el logo al extremo derecho */
+  padding-left: 20px; /* Añade un poco de espacio a la izquierda del logo */
+  position: fixed;
+width: 200px;
+  height: 100px;
+}
 
-  
-  .centered-element a:hover {
-    background-color: rgb(49,30,214); /* Color de fondo al pasar el mouse */
-  }
-  .right-aligned a:hover {
-    background-color: rgb(49,30,214); /* Color de fondo al pasar el mouse */
-  }
+.logo h1 {
+  margin: 0; /* Elimina el margen del título del logo */
+  font-size: 50px;
+  color: #fff;
+  margin-left: 70px;
 
-  .centered-element{
-   color: #fff;
-    margin-left: 300px;
-    width: 200px;
-  }
+}
+.class-span{
+  color: rgb(221, 108, 21);
 
-  .right-aligned {
-    margin-left: 3px; /* Ajusta el margen derecho según sea necesario */
-  }
+}
+.clas-spam{
+  color: rgb(221, 108, 21);
+}
 
-  .right-aligned2{
-    width: 140px;
-    margin-left: 270px; /* Ajusta el margen derecho según sea necesario */
+.menu-icon {
+  display: none;
+}
 
-  }
+.ul-navbar {
+  display: flex; /* Mostrar los elementos en línea */
+  list-style-type: none; /* Quitar los puntos de la lista */
+  padding: 0; /* Eliminar el espacio interior de la lista */
+}
 
-   .centered-element
-   right-aligned, a {
-    font-weight: bold;
-    color: #fff; /* Color del texto de los enlaces */
-    text-decoration: none; /* Quitar subrayado de los enlaces */
-    
-    border-radius: 5px; /* Bordes redondeados */
-    transition: background-color 0.3s ease; /* Efecto de transición al pasar el mouse */
-  }
+.navbar-li {
+  margin-right: 200px; /* Espacio entre elementos del Navbar */
+}
 
-  .right-aligned
-  right-aligned, a:hover {
-    background-color: #555; /* Color de fondo al pasar el mouse */
-    height: 100px;
-   
-  }
+.navbar-li a {
+  margin-bottom: 60px;
+  font-family: sans-serif;
+  font-size: 16.2px;
+  font-weight: bold;
+  color: #fff; /* Color del texto de los enlaces */
+  text-decoration: none solid rgb(49, 30, 214); /* Quitar subrayado de los enlaces */
+  padding: 10px; /* Espacio interno de los enlaces */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Efecto de transición al pasar el mouse */
+}
+
+.navbar-li a:hover {
+  align-items: center;
+
+  background-color: rgb(49, 30, 214); /* Color de fondo al pasar el mouse */
+}
+
+
+
+
+.right-icons {
+  display: flex;
+  align-items: flex-end;
+  align-items: center;
+}
+
+.right-aligned2 {
+  margin-right: 200px; /* Espacio entre elementos del Navbar */
+}
+
+.right-aligned {
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  margin-right: 160px; /* Espacio entre elementos del Navbar */
+  width: 170px;
+}
+svg{
+  color: rgb(221, 108, 21);
+  height: 60px;
+  width: 30px;
+}
+
+.carrito-container {
+  display: flex;
+  align-items: center;
+}
+
+.cart-item-count {
+  margin-left: 5px; /* Ajusta el margen entre el icono y el número según sea necesario */
+  color: red;
+}
+
+
   @media screen and (max-width: 767px) {
 
     .container-navbar{
@@ -126,11 +142,8 @@
       margin-left: 10px;
     }
   }
-  /* Estilos para pantallas de 768px a 1024px (medianas) */
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Estilos para pantallas de 768px a 1024px (medianas)
+  /* @media screen and (min-width: 768px) and (max-width: 1024px) {
     .right-aligned {
       margin-left: 200px; /* Ajusta el margen izquierdo para pantallas medianas */
-    }
-  }
-  
-  
+    

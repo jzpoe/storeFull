@@ -1,23 +1,45 @@
 .container-header {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   width: 100%;
-  height: 40vh;
-  background-color: rgb(234, 230, 227);
+  height: 700px; /* Ajusta la altura según sea necesario */
 }
 
-p {
+.container-header .image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 70vh;
-  height: 40px;
-  border-radius: 10px;
-  font-size: 20px;
-  background-color: rgb(0, 0, 0, 0.1);
-  margin: 10px;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  border-bottom-left-radius: 100px; /* Borde semicircular en la esquina inferior izquierda */
+  border-bottom-right-radius: 300px; /* Borde semicircular en la esquina inferior derecha */
+
+  background-color: rgb(221, 108, 21);
 }
 
+.container-header .header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para cubrir completamente el contenedor */
+  border-bottom-left-radius: 50px; /* Borde semicircular en la esquina inferior izquierda */
+  border-bottom-right-radius: 500px; /* Borde semicircular en la esquina inferior derecha */
+}
+
+.container-parrafo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el contenido en el medio */
+  text-align: center; /* Alinea el texto al centro */
+  color: #fff; /* Color del texto */
+  font-size: 50px; /* Tamaño de fuente */
+  font-weight: bold; /* Peso de fuente */
+  background-color: rgba(0, 0, 0, 0.5); /* Color de fondo con transparencia */
+  padding: 10px; /* Agrega un relleno alrededor del texto */
+}
 .container-p1 {
   display: flex;
   flex-direction: column;
@@ -80,6 +102,16 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .container-header .image-overlay {
+    max-width: 767px;
+    max-height: 767px;
+    height: 300px;
+  }
+  .container-header{
+    max-width: 767px;
+    max-height: 767px;
+    height: 300PX;
   }
   .container-swiper h1{
     
