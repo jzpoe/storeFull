@@ -103,7 +103,7 @@ h1 {
     justify-content: center;
     align-items: center;
   }
-  .container-header .image-overlay {
+  .image-overlay {
     max-width: 767px;
     max-height: 767px;
     height: 300px;
@@ -111,8 +111,9 @@ h1 {
   .container-header{
     max-width: 767px;
     max-height: 767px;
-    height: 300PX;
+    height: 340PX;
   }
+  
   .container-swiper h1{
     
     font-size: 20px;

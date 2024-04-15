@@ -1,4 +1,5 @@
 .container-image {
+  margin-top: 60px;
   position: relative; /* Asegura que el contenido no se superponga al fondo */
   overflow: hidden; /* Oculta el desbordamiento del contenido */
   width: 100%;
@@ -70,15 +71,18 @@ h2 {
 }
 
 .btn-delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: 35%;
   margin-top: 1%;
-  background-color: black; /* Color de fondo rojo */
-  color: white; /* Color del texto blanco */
+  background-color: rgb(221, 108, 21); /* Color del texto blanco */
   border: none; /* Sin borde */
   padding: 8px 16px; /* Espaciado interno */
   cursor: pointer; /* Cambiar a cursor de puntero */
   border-radius: 4px; /* Bordes redondeados */
-  font-size: 16px; /* Tamaño de fuente */
+  width: 60px;
+  height: 60px;
 }
 
 /* Estilo cuando se pasa el mouse sobre el botón */

@@ -15,28 +15,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 100px; /* Mueve el logo al extremo derecho */
-  padding-left: 20px; /* Añade un poco de espacio a la izquierda del logo */
+  margin-right: 5%; /* Mueve el logo al extremo derecho */
+  padding-left: 1%; /* Añade un poco de espacio a la izquierda del logo */
   position: fixed;
-width: 200px;
-  height: 100px;
+  width: 20%; /* Porcentaje del ancho del contenedor padre */
+  height: 10%; /* Porcentaje del alto del contenedor padre */
+  background-color: rgb(0,0,0, 0.9);
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
 .logo h1 {
   margin: 0; /* Elimina el margen del título del logo */
-  font-size: 50px;
+  font-size: 3vw; /* Tamaño de fuente relativo al ancho de la ventana */
   color: #fff;
-  margin-left: 70px;
-
+  margin-left: 5%; /* Espacio a la izquierda del texto */
 }
-.class-span{
-  color: rgb(221, 108, 21);
 
-}
-.clas-spam{
+.clas-spam,
+.class-span {
   color: rgb(221, 108, 21);
 }
-
 .menu-icon {
   display: none;
 }
@@ -89,8 +89,12 @@ width: 200px;
   margin-right: 160px; /* Espacio entre elementos del Navbar */
   width: 170px;
 }
-svg{
+.menu-hamburguesa{
   color: rgb(221, 108, 21);
+
+}
+svg{
+  color: black;
   height: 60px;
   width: 30px;
 }
@@ -111,11 +115,13 @@ svg{
     .container-navbar{
       flex-direction: column;
     align-items: flex-start; /* Alinea los elementos al principio */
-    background-color: transparent;
     }
     .menu-icon {
       display: block;
       margin-right: 100px;
+    }
+    .right-icons{
+      flex-direction: column;
     }
   
     .ul-navbar {
