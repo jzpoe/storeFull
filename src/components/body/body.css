@@ -1,7 +1,7 @@
 .container-body{
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
     height: 90vh;
     margin: 10px;
 }
@@ -31,6 +31,7 @@
     max-width: 400px; /* Ancho máximo en píxeles para evitar que la card se vuelva demasiado ancha en pantallas grandes */
     margin-left: auto; /* Centra la card horizontalmente */
     margin-right: auto; /* Centra la card horizontalmente */
+    margin-top: 242px;
   }
 
 .contenido2{
@@ -48,10 +49,13 @@ width: 80%;
     margin-right: 200px;
 }
 h2 {
-    font-size: 3vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+  max-width: 767px;
+    font-size: 2vw; /* Tamaño de fuente relativo al ancho de la pantalla */
   }
   
   p {
+    max-width: 767px;
+
     font-size: 2vw; /* Tamaño de fuente relativo al ancho de la pantalla */
   }
 .container-p-body{
@@ -82,7 +86,8 @@ h2 {
       margin-right: 0; /* Elimina el margen derecho */
       height: auto; /* Cambia la altura automática */
       max-width: 767px; /* Ancho máximo en píxeles para evitar que la card se vuelva demasiado ancha en pantallas grandes */
-
+     width: 318px;
+     margin-top: 0;
     }
   
     .contenido2 img {
@@ -93,16 +98,44 @@ h2 {
   
     h2, p {
       text-align: center; /* Centra el texto */
+      font-size: 4vw;
     }
   }
   
   /* Estilos para pantallas de 768px a 1024px (medianas) */
   @media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .container-body{
+      display: flex;
+      justify-content: space-between;
+      width: 97%;
+      height: 46vh;
+      margin: 10px;
+  }
+  .body-image{
+    width: auto;
+    height: 300px;
+    margin-top: 56px;
+}
+
     .card {
         max-width: 768px; /* Ajusta la imagen al ancho del contenedor */
+        margin-top: 0;
+    }
+    .contenido1{
+      width: 100px;
+    }
+    .contenido2{
+      width: 0;
     }
     .contenido2 img {
-        max-width: 768px; /* Ajusta la imagen al ancho del contenedor */
+      max-width: 1024px;
+      width: 383px;
+      height: 468px;
+      margin-right: 0;
+  }
+  .contenido{
+    width: 50px;
 
   }
 }

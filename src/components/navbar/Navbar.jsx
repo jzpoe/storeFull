@@ -50,7 +50,7 @@ export const Navbar = () => {
     <li className="centered-element">
       <Link to="/contacto">CALISTORE</Link>
     </li> */}
-          <div className="right-icons">
+         
             <li className="navbar-li">
               <Link to="/update">
                 <MdOutlineManageAccounts />
@@ -58,13 +58,14 @@ export const Navbar = () => {
             </li>
             <li className="navbar-li">
               <Link to="/content" className="navbar-li">
-                <div className="carrito-container">
+                
                   <FaCartPlus />
-                  <span className="cart-item-count">{cartItemCount}</span>
-                </div>
+                
               </Link>
             </li>
-          </div>
+    <li className="navbar-li" >
+    <span className="cart-item-count">{cartItemCount}</span>
+    </li>
         </ul>
       </nav>
     </>

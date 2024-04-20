@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import  { useContext } from "react";
 import { dataContext } from "../context/DataContext";
 import Header from "../header/Header";
 import Swal from "sweetalert2";
@@ -67,7 +67,6 @@ export const RenderImage = () => {
               
                         
                         objectFit: 'cover',
-                        height: 270,
                         backgroundColor: 'var(--gray-5)',
                       }}
                     />

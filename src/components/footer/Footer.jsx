@@ -15,10 +15,10 @@ const Footer = () => {
           
           <ul>
           <div className="footer-section-contact">
-          <h2 className="footer-section-title">Contactanos</h2>
-          <p className='clase-p2'>Dirección: Calle, Ciudad, País</p>
-          <p className='clase-p'>Teléfono: +123456789</p>
-          <p className='clase-p'>Email: info@ejemplo.com</p>
+             <h2 className="footer-section-title">Contactanos</h2>
+            <p className='clase-p2'>Dirección: Calle, Ciudad, País</p>
+             <p className='clase-p'>Teléfono: +123456789</p>
+            <p className='clase-p'>Email: info@ejemplo.com</p>
         </div>
             <li> <a href="mailto:pmguez1287@gmail.com">
                 {/* <img className='img-gmail' src="img/footer/gmail.jpg" alt="imagen de correo" />

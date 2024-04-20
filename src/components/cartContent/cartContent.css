@@ -1,0 +1,31 @@
+.image-grid-cart {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); /* Cuadrícula de imágenes responsiva */
+    gap: 7px;
+    margin-left: 100px;
+    margin-top: 300px;
+  }
+
+  .h1-image-grid-cart{
+    font-size: 3vw;
+}
+
+
+  @media screen and (max-width: 767px) {
+
+    .image-grid-cart {
+        margin-left: 25px;
+        margin-top: 100px;
+
+    }
+    
+    .image-grid-cart .h1-image-grid-cart{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .h1-image-grid-cart{
+        font-size: 5vw;
+    }
+
+  }
