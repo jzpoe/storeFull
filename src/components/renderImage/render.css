@@ -1,14 +1,18 @@
 .container-image {
+  
   margin-top: 60px;
   position: relative; /* Asegura que el contenido no se superponga al fondo */
   overflow: hidden; /* Oculta el desbordamiento del contenido */
   width: 100%;
   height: 100%;
-  background-image: url('/body/cielo-otonal.jpg');
+  background-color: rgb(12, 12, 12);
+  /*background-image: url('/body/cielo-otonal.jpg');*/
   background-size: cover; /* Ajusta el tamaño de la imagen de fondo para cubrir completamente el contenedor */
   background-position: center; /* Centra la imagen de fondo */
   background-attachment: fixed; /* Fija la imagen de fondo para crear el efecto de paralaje */
 }
+
+
 
 .image-grid {
   display: grid;
@@ -24,16 +28,18 @@
   height: 273px;
   width: 265px;
   border-radius: 20px;
+  margin-left: 13px;
 }
 
 
 
 .image-card {
-  
+margin: 20px;
+  background-color: rgb(242, 97, 63);
   height: 480px;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9); /* Sombras suaves */
-  width: 300px;
+  width: 290px;
   overflow: hidden; /* Para que los bordes redondeados se apliquen correctamente */
 }
 
@@ -49,6 +55,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+
 }
 
 .container-description {
@@ -74,8 +81,8 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 35%;
-  margin-top: 1%;
+  margin-left: 5%;
+  margin-top: 23%;
   background-color: rgb(221, 108, 21); /* Color del texto blanco */
   border: none; /* Sin borde */
   padding: 8px 16px; /* Espaciado interno */
@@ -123,9 +130,24 @@ h2 {
 
   .image-item {
     max-width: 768px;
+    width: 166px;
+    margin-left: 11px;
+    width: 190px; /* Las imágenes ocuparán el ancho completo para pantallas extra pequeñas */
+    height: 150px;
+  }
+  .image-card{
+    width: auto;
+  }
 
-    width: 200px; /* Las imágenes ocuparán el ancho completo para pantallas extra pequeñas */
-    height: 200px;
+  .btn-delete {
+    
+    width: 100PX;
+    height: 50px;
+  }
+
+  .red-heart {
+    
+    color: black;
   }
   
 } 

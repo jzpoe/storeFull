@@ -19,7 +19,11 @@ export const Navbar = () => {
 
   return (
     <>
-      <div className="logo">
+      
+
+      <nav className="container-navbar">
+        <div className="container-logo">
+        <div className="logo">
         <h1>
           <span className="clas-spam">•M</span>
           <span>y</span>
@@ -27,8 +31,8 @@ export const Navbar = () => {
           <span className="class-span">s</span>•
         </h1>
       </div>
-
-      <nav className="container-navbar">
+        </div>
+      
         <div className="menu-icon" onClick={() => setIsOpen(!isOpen)}>
           <GiHamburgerMenu  className="menu-hamburguesa"/>
         </div>
@@ -53,7 +57,7 @@ export const Navbar = () => {
               </Link>
             </li>
             <li className="navbar-li">
-              <Link to="/content" className="carrito">
+              <Link to="/content" className="navbar-li">
                 <div className="carrito-container">
                   <FaCartPlus />
                   <span className="cart-item-count">{cartItemCount}</span>

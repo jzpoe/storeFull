@@ -17,7 +17,7 @@
   border-bottom-left-radius: 100px; /* Borde semicircular en la esquina inferior izquierda */
   border-bottom-right-radius: 300px; /* Borde semicircular en la esquina inferior derecha */
 
-  background-color: rgb(221, 108, 21);
+  background-color: rgb(72, 30, 20);
 }
 
 .container-header .header-image {
@@ -98,6 +98,8 @@ h1 {
 }
 
 @media screen and (max-width: 767px) {
+
+  
   .container-swiper{
     display: flex;
     justify-content: center;
