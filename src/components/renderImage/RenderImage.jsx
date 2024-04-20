@@ -31,8 +31,10 @@ export const RenderImage = () => {
           text: response.data.message,
         });
         // Actualizar la lista de imágenes después de eliminar
-        renderImagen1();
+        
       }
+      renderImagen1();
+      
     } catch (error) {
       console.error("Error al eliminar la imagen:", error);
       Swal.fire({
