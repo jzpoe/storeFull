@@ -1,4 +1,4 @@
-import  { useContext } from "react";
+import  { useContext, useEffect, useState } from "react";
 import { dataContext } from "../context/DataContext";
 import Header from "../header/Header";
 import Swal from "sweetalert2";
@@ -11,6 +11,8 @@ import "./render.css";
 export const RenderImage = () => {
   const { imagenGet, descripcion, price, talla, renderImagen1, selectProduct, setSelectProduct } = useContext(dataContext);
   
+  
+
   const handleEliminarImagen = async (image) => {
     try {
       const result = await Swal.fire({

@@ -10,6 +10,15 @@
   align-items: center;
   background-color: rgb(0, 0, 0, 0.7);
   padding: 0 20px; /* Añadir espacio alrededor del Navbar */
+  transition: background-color 0.3s ease, height 0.3s ease; /* Agregar transición suave */
+
+}
+.scrolled {
+  transition: background-color 0.3s ease, height 0.3s ease; /* Agregar transición suave */
+
+  background-color: rgb(0, 0, 0, 0.7);
+  height: 60px; /* Cambiar altura del navbar cuando esté desplazado */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agregar sombra cuando el navbar esté desplazado */
 }
 
 .logo {

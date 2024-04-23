@@ -11,6 +11,26 @@ export const Navbar = () => {
   const { selectProduct } = useContext(dataContext);
   const [cartItemCount, setCartItemCount] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled,  setIsScrolled]= useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Limpiar el event listener cuando el componente se desmonta
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
 
   useEffect(() => {
     // Actualizar la cantidad de elementos en el carrito cuando selectProduct cambie
@@ -21,7 +41,7 @@ export const Navbar = () => {
     <>
       
 
-      <nav className="container-navbar">
+      <nav className={`container-navbar ${isScrolled && "scrolled"}`} >
         <div className="container-logo">
         <div className="logo">
         <h1>

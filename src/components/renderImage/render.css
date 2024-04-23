@@ -5,6 +5,9 @@
   overflow: hidden; /* Oculta el desbordamiento del contenido */
   width: 100%;
   height: 100%;
+  background-color: #fff;
+  
+
   /*background-image: url('/body/cielo-otonal.jpg');*/
   background-size: cover; /* Ajusta el tamaño de la imagen de fondo para cubrir completamente el contenedor */
   background-position: center; /* Centra la imagen de fondo */
@@ -25,6 +28,7 @@
   max-width: 100%; /* La imagen no superará el ancho del contenedor */
   height: 573px;
   width: 365px;
+  border-radius: 10px;
 }
 
 Text .p{
