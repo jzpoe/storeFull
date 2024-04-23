@@ -53,25 +53,34 @@ export const RenderImage = () => {
       <Header />
 
       <div className="container-image">
+      <div>
+            <h1 className="container-h1-productos">
+              <p className="parrafo-nuestros-productos">Nuestros Productos</p>
+            </h1>
+          </div>
         <div className="image-grid">
+          
           {imagenGet.map((imagen, index) => (
-            <div key={imagen.public_id} className="image-card">
-              <Box>
-                <Card>
+            <div key={imagen.public_id} >
+              <Box className="container-box">
+                <Card  style={{ width: '100%', height: '100%' }}>
                   <Inset clip="padding-box" side="top" pb="current">
                     <img
                       src={imagen.url}
                       alt={imagen.original_filename}
                       className="image-item"
                       style={{
-              
                         
-                        objectFit: 'cover',
-                        backgroundColor: 'var(--gray-5)',
+                       
                       }}
                     />
-                    <Text as="p" size="3">
-                      <Strong>Typography</Strong> {descripcion[index] && descripcion[index].description}
+                    <Text as="p" size="10" color="white">
+                      <Strong style={{
+                        
+                      }}>{descripcion[index] && descripcion[index].description}
+                      {price && descripcion[index].description}
+                      </Strong> 
+                      
                     </Text>
                   </Inset>
                 </Card>

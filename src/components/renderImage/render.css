@@ -5,7 +5,6 @@
   overflow: hidden; /* Oculta el desbordamiento del contenido */
   width: 100%;
   height: 100%;
-  background-color: rgb(12, 12, 12);
   /*background-image: url('/body/cielo-otonal.jpg');*/
   background-size: cover; /* Ajusta el tamaño de la imagen de fondo para cubrir completamente el contenedor */
   background-position: center; /* Centra la imagen de fondo */
@@ -17,22 +16,47 @@
 .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); /* Cuadrícula de imágenes responsiva */
-  gap: 7px;
-  margin-left: 100px;
+  gap: 10px;
   margin-top: 70px;
+  margin: 30px;
 }
 
 .image-item {
-  margin-top: 50px;
   max-width: 100%; /* La imagen no superará el ancho del contenedor */
-  height: 273px;
-  width: 265px;
-  border-radius: 20px;
-  margin-left: 13px;
+  height: 573px;
+  width: 365px;
 }
 
+Text .p{
+font-size: 50px;
+width: 50px;
+}
 
+Strong{
+width: 300px;
+height: 300px;
+font-size: 50px;
+color: black;
+margin-left: 60px;
 
+}
+
+.container-box { 
+  width: 400px;
+  height: 700px;
+}
+.parrafo-nuestros-productos{
+  font-size: 50px;
+  color: rgb(221, 108, 21)
+}
+.container-h1-productos{
+  background-color: rgb(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+}
 .image-card {
 margin: 20px;
   background-color: #fff;
@@ -99,30 +123,16 @@ h2 {
 
 
 
-/* Media queries para pantallas pequeñas */
-@media (max-width: 768px) {
-  .image-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta el tamaño de las imágenes para pantallas pequeñas */
-    margin-left: 0px; /* Ajusta el margen izquierdo para pantallas pequeñas */
-    margin-top: 20px; /* Ajusta el margen superior para pantallas pequeñas */
-    
-  }
 
-  
-}
 
 @media (max-width: 767px) {
-  .container-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  
+  
+  .container-box { 
+    width: 380px;
+    height: 600px;
   }
-
-  image-card{
-    max-width: 767px;
-    width: 200px;
-    height: 350PX;
-  }
+ 
   .image{
     max-width: 768px;
     width: 300px;
@@ -130,20 +140,18 @@ h2 {
 
   .image-item {
     max-width: 768px;
-    width: 166px;
-    margin-left: 43px;
     width: 190px; /* Las imágenes ocuparán el ancho completo para pantallas extra pequeñas */
-    height: 285px;
+    height: 28px;
   }
   .image-card{
+    
     width: 266px;
   }
 
   .btn-delete {
-    
     width: 100PX;
     height: 50px;
-    margin-left: 82px;
+    margin-left: 40%;
   }
 
   .red-heart {
@@ -151,10 +159,28 @@ h2 {
     color: black;
   }
   
-} 
-@media  (max-width: 1024px) {
-  .container-image{
-    margin-top: 0;
+} /* Media queries para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta el tamaño de las imágenes para pantallas pequeñas */
+    margin-left: 0px; /* Ajusta el margen izquierdo para pantallas pequeñas */
+    margin-top: 20px; /* Ajusta el margen superior para pantallas pequeñas */
+    gap: 42px;
   }
+  .image-item {
+    max-width: 768px;
+    margin-left: 20px;
+    width: 100%; /* Las imágenes ocuparán el ancho completo para pantallas extra pequeñas */
+    height: 568px;
+  }
+  
 }
 
+@media screen and (max-width: 1440px) {
+  .image-item {
+    max-width: 768px;
+    margin-left: 20px;
+    width: 100%; /* Las imágenes ocuparán el ancho completo para pantallas extra pequeñas */
+    height: 568px;
+  }
+}

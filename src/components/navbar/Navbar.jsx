@@ -40,7 +40,7 @@ export const Navbar = () => {
           <li className="navbar-li">
             <Link to="/">
               {" "}
-              <IoMan />
+              <IoMan /> 
             </Link>
           </li>
           {/* Comenté los elementos que no deseas mostrar */}
