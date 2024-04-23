@@ -18,6 +18,7 @@ const DataProvider = ({ children }) => {
       setDescripcion(response.data.text);
       setPrice(response.data.text);
       setTalla(response.data.text);
+      renderImagen1()
     } catch (error) {
       console.error("Error al obtener las imágenes:", error);
     }
